@@ -9,8 +9,6 @@ import re
 
 
 class CocheBMWClass:
-    def __init__(self):
-        self.main()
 
     def main(self):
         driver = uc.Chrome()
@@ -57,6 +55,8 @@ class CocheBMWClass:
                 for element in elements:
                     start_urls.append(element.get_attribute("href"))
 
+                #probar esto
+                start_urls = list(dict.fromkeys(start_urls))
                 print(f"start_urls: {start_urls}")
                 print(f"len start_urls: {len(start_urls)}")
                 increment += 200
