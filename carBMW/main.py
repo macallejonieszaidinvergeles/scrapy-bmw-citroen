@@ -7,7 +7,11 @@ import json
 from lib2to3.pytree import convert
 import re
 
-class CocheBMW:
+
+class CocheBMWClass:
+    def __init__(self):
+        self.main()
+
     def main(self):
         driver = uc.Chrome()
 
@@ -66,7 +70,6 @@ class CocheBMW:
                     break
             time.sleep(random.randint(3, 5))
 
-
     # def getinfo():
 
     #     driver = uc.Chrome()
@@ -84,44 +87,43 @@ class CocheBMW:
     #     # archivo = json.loads(scripts)
     #     print(f"archivo: \n {scripts[39:len(scripts)-3]}")
 
-
     keys = {
-            "color": "ad",
-            "fuelTypeId": "ad",
-            "fuelType": "leadData",
-            "id": "ad",
-            "km": "ad",
-            "make": "ad",
-            "makeId": "ad",
-            "model": "ad",
-            "modelId": "ad",
-            "price": "ad",
-            "province": "ad",
-            "provinceId": "ad",
-            "title": "ad",
-            "transmissionType": "ad",
-            "transmissionTyId": "ad",
-            "year": "ad",
-            "brand": "leadData",
-            "brand_id": "leadData",
-            "fuel_type": "ad",
-            "km": "leadData",
-            "model": "leadData",
-            "model_id": "leadData",
-            "price": "leadData",
-            "seller_type": "leadData",
-            "bodyType": "vehicleInfo/specifications",
-            "cubicCapacity": "vehicleInfo/specifications",
-            "doors": "vehicleInfo/specifications",
-            "hp": "vehicleInfo/specifications",
-        }
+        "color": "ad",
+        "fuelTypeId": "ad",
+        "fuelType": "leadData",
+        "id": "ad",
+        "km": "ad",
+        "make": "ad",
+        "makeId": "ad",
+        "model": "ad",
+        "modelId": "ad",
+        "price": "ad",
+        "province": "ad",
+        "provinceId": "ad",
+        "title": "ad",
+        "transmissionType": "ad",
+        "transmissionTyId": "ad",
+        "year": "ad",
+        "brand": "leadData",
+        "brand_id": "leadData",
+        "fuel_type": "ad",
+        "km": "leadData",
+        "model": "leadData",
+        "model_id": "leadData",
+        "price": "leadData",
+        "seller_type": "leadData",
+        "bodyType": "vehicleInfo/specifications",
+        "cubicCapacity": "vehicleInfo/specifications",
+        "doors": "vehicleInfo/specifications",
+        "hp": "vehicleInfo/specifications",
+    }
 
     def parse(self):
         keys_and_values = {}
         # scripts = response.css("script::text")
         scripts = driver.find_element_by_xpath("/html/body/script[3]")
         scripts = scripts.get_attribute("innerHTML")
-        scripts = scripts[39:len(scripts)-3]
+        scripts = scripts[39 : len(scripts) - 3]
         data_json = self.get_data_in_dictionary(scripts)
         for key in self.keys:
             path = self.get_path(self.keys, key)
@@ -130,7 +132,7 @@ class CocheBMW:
         json_response = json.dumps(keys_and_values)
         yield keys_and_values
 
-    def get_only_fisrt_value(self,keys_and_values):
+    def get_only_fisrt_value(self, keys_and_values):
         for key in keys_and_values:
             datas = keys_and_values[key]
             if len(datas) == 0:
@@ -139,7 +141,7 @@ class CocheBMW:
                 keys_and_values[key] = keys_and_values[key][0]
         return keys_and_values
 
-    def search_all_coincidences(self,key, path, data_json):
+    def search_all_coincidences(self, key, path, data_json):
         coincidences = []
         data_json = self.get_sub_path(path, data_json)
         if isinstance(data_json, list):
@@ -159,20 +161,20 @@ class CocheBMW:
                     )
         return coincidences
 
-    def get_path(self,keys, key):
+    def get_path(self, keys, key):
         path = None
         if isinstance(keys, dict):
             path = keys[key]
         return path
 
-    def get_sub_path(self,path, data_json):
+    def get_sub_path(self, path, data_json):
         if path != None:
             path = path.split("/")
             for sub_path in path:
                 data_json = data_json[sub_path]
         return data_json
 
-    def get_data_in_dictionary(self,scripts):
+    def get_data_in_dictionary(self, scripts):
         for script in scripts:
             scriptText = script.get()
             if scriptText.startswith('window.__INITIAL_PROPS__ = JSON.parse("'):
@@ -186,7 +188,6 @@ class CocheBMW:
                 return json.loads(searchStringAd)
 
 
-
-    if __name__ == "__main__":
-        # getinfo()
-        main()
+if __name__ == "__main__":
+    bmw = CocheBMWClass()
+    bmw.main()
