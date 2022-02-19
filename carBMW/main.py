@@ -26,10 +26,38 @@ class CocheBMWClass:
         agents = len(user_agents) - 1
 
         pages = [
+            # bmw
             "https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020",
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=2',
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=3',
-            # 'https://informatica.ieszaidinvergeles.org:10099/pia/practica2/cochesnet.html'
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=4',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=6',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=7',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=8',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=9',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=10',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=11',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=12',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=13',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=14',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=15',
+
+
+            # citroen
+            # "https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020",
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=2',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=3',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=4',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=6',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=7',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=8',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=9',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=10',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=11',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=12',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=13',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=14',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=15',
         ]
         first = True
 
@@ -77,7 +105,7 @@ class CocheBMWClass:
         for url in start_urls:
             time.sleep(5)
             driver.get(url)
-            time.sleep(10)
+            time.sleep(20)
             self.parse()
             time.sleep(7)
 
@@ -145,7 +173,7 @@ class CocheBMWClass:
         # yield keys_and_values
 
         with open('my.json', 'a') as fp:
-            pickle.dump(keys_and_values, fp)
+            fp.write(str(keys_and_values))
         return keys_and_values
 
 
@@ -208,11 +236,14 @@ class CocheBMWClass:
 
 
 if __name__ == "__main__":
+
+    # no se ve como abre la ventana, ejecuta estrictamente el codigo
+    options = uc.ChromeOptions()
+    options.headless=True
+    options.add_argument('--headless')
+
     bmw = CocheBMWClass()
-    driver = uc.Chrome()
+    driver = uc.Chrome(options=options)
     bmw.main()
     # bmw.getinfoMio()
 
-
-# start_urls = ['https://www.coches.net/bmw-serie-3-318d-gran-turismo-5p-diesel-2017-en-madrid-51139859-covo.aspx', 'https://www.coches.net/bmw-serie-3-318d-touring-5p-diesel-2019-en-barcelona-51242929-covo.aspx', 'https://www.coches.net/bmw-x5-xdrive30d-5p-diesel-2011-en-madrid-51160972-covo.aspx', 'https://www.coches.net/bmw-x6-m50d-5p-diesel-2017-en-vizcaya-48932150-covo.aspx', 'https://www.coches.net/bmw-x6-xdrive40d-5p-diesel-2015-en-madrid-51209365-covo.aspx', 'https://www.coches.net/bmw-x6-xdrive40d-5p-diesel-2016-en-leon-50709570-covo.aspx', 'https://www.coches.net/bmw-x5-xdrive40e-5p-electrico-hibrido-2015-en-madrid-51206461-covo.aspx', 'https://www.coches.net/bmw-x3-m40i-5p-gasolina-2019-en-madrid-51100648-covo.aspx', 'https://www.coches.net/bmw-x4-xdrive30d-diesel-2015-en-valencia-49929730-covo.aspx', 'https://www.coches.net/bmw-serie-5-520da-4p-diesel-2018-en-madrid-51039348-covo.aspx',
-#               'https://www.coches.net/bmw-serie-1-118d-5p-diesel-2019-en-malaga-49595915-covo.aspx', 'https://www.coches.net/bmw-serie-5-520da-business-4p-diesel-2017-en-guipuzcoa-51184325-covo.aspx', 'https://www.coches.net/bmw-x4-xdrive20d-5p-diesel-2019-en-murcia-50951177-covo.aspx', 'https://www.coches.net/bmw-serie-2-216d-dct-gran-coupe-4p-diesel-2020-en-murcia-51001957-covo.aspx', 'https://www.coches.net/bmw-serie-6-640d-2p-diesel-2015-en-madrid-51151358-covo.aspx', 'https://www.coches.net/bmw-serie-3-320d-automatico-xdrive-gran-turismo-diesel-2017-en-pontevedra-51339143-covo.aspx', 'https://www.coches.net/bmw-serie-3-318d-gran-turismo-5p-diesel-2014-en-guadalajara-51339107-covo.aspx', 'https://www.coches.net/bmw-serie-3-318d-diesel-2016-en-malaga-51018895-covo.aspx', 'https://www.coches.net/bmw-serie-1-116d-diesel-2017-en-malaga-50979296-covo.aspx', 'https://www.coches.net/bmw-x6-xdrive30d-5p-diesel-2018-en-las_palmas-50366752-covo.aspx']
