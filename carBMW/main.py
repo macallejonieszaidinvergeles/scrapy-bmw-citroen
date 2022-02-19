@@ -27,8 +27,8 @@ class CocheBMWClass:
 
         pages = [
             # bmw
-            "https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020",
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=2',
+            # "https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020", hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=2', hecho 
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=3',
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=4',
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=6',
@@ -44,9 +44,9 @@ class CocheBMWClass:
 
 
             # citroen
-            # "https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020",
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=2',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=3',
+            # "https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020", hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=2', hecho 
+            'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=3',
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=4',
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=6',
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=7',
@@ -96,6 +96,7 @@ class CocheBMWClass:
 
             time.sleep(random.randint(3, 5))
 
+        # indexar dentro del for para que pille varios enlaces (estado en prueba)
         for element in elements:
             start_urls.append(element.get_attribute("href"))
 
@@ -244,6 +245,6 @@ if __name__ == "__main__":
 
     bmw = CocheBMWClass()
     driver = uc.Chrome(options=options)
+    # driver = uc.Chrome()
     bmw.main()
     # bmw.getinfoMio()
-
