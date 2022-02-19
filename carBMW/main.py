@@ -6,6 +6,8 @@ import undetected_chromedriver as uc
 import json
 from lib2to3.pytree import convert
 import re
+import pickle
+
 
 
 class CocheBMWClass:
@@ -141,7 +143,12 @@ class CocheBMWClass:
         keys_and_values = self.get_only_fisrt_value(keys_and_values)
         json_response = json.dumps(keys_and_values)
         # yield keys_and_values
+
+        with open('my.json', 'a') as fp:
+            pickle.dump(keys_and_values, fp)
         return keys_and_values
+
+
 
     def get_only_fisrt_value(self, keys_and_values):
         for key in keys_and_values:
