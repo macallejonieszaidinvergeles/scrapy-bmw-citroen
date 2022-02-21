@@ -29,13 +29,14 @@ class CocheBMWClass:
             # bmw
             # "https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020", hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=2', hecho 
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=3',
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=4',
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=6',
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=7',
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=8',
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=9',
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=10',
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=3', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=4', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=5', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=6', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=7', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=8', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=9', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=10', hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=11',
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=12',
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=13',
@@ -46,13 +47,14 @@ class CocheBMWClass:
             # citroen
             # "https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020", hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=2', hecho 
-            'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=3',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=4',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=6',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=7',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=8',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=9',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=10',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=3', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=4', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=5', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=6', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=7', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=8', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=9', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=10', hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=11',
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=12',
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=13',
@@ -96,9 +98,9 @@ class CocheBMWClass:
 
             time.sleep(random.randint(3, 5))
 
-        # indexar dentro del for para que pille varios enlaces (estado en prueba)
-        for element in elements:
-            start_urls.append(element.get_attribute("href"))
+            # indexar dentro del for para que pille varios enlaces (estado en prueba)
+            for element in elements:
+                start_urls.append(element.get_attribute("href"))
 
         print(f"start_urls: {start_urls}")
         print(f"len start_urls: {len(start_urls)}")
