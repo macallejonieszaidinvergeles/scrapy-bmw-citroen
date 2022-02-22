@@ -35,13 +35,13 @@ class CocheBMWClass:
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=6', hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=7', hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=8', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=9', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=10', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=11', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=12', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=13', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=14',
-            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&pg=15',
+            'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=9', 
+            'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=10', 
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=11', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=12', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=13', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=14', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=15', hecho
 
 
             # citroen
@@ -175,7 +175,7 @@ class CocheBMWClass:
         json_response = json.dumps(keys_and_values)
         # yield keys_and_values
 
-        with open('my.json', 'a') as fp:
+        with open('my2.json', 'a') as fp:
             fp.write(str(keys_and_values))
         return keys_and_values
 
