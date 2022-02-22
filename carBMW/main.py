@@ -47,8 +47,8 @@ class CocheBMWClass:
             # citroen
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1' hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=2', hecho
-            'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=3',
-            'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=4',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=3', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=4', hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=5',
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=6',
             # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=7',
