@@ -39,27 +39,27 @@ class CocheBMWClass:
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=10', hecho 
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=11', hecho
             # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=12', hecho
-            'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=13', 
-            'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=14', 
-            'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=15', 
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=13', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=14', hecho
+            # 'https://www.coches.net/segunda-mano/?MakeId=7&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=15', hecho
 
 
             # citroen
-            # "https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020", hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=2', hecho 
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=3', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=4', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=5', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=6', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=7', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=8', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=9', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=10', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=11', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=12', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=13', hecho
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=14',
-            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&pg=15',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1'
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=2',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=3',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=4',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=5',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=6',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=7',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=8',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=9',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=10',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=11',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=12',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=13',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=14',
+            # 'https://www.coches.net/segunda-mano/?MakeId=11&MinYear=2010&MaxYear=2020&MinKms=10000&st=1&pg=15',
         ]
         first = True
 
