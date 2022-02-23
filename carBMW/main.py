@@ -132,7 +132,7 @@ class CocheBMWClass:
     keys = {
         "color": "ad",
         "fuelTypeId": "ad",
-        "fuelType": "leadData",
+        "fuelType": "ad",
         "id": "ad",
         "km": "ad",
         "make": "ad",
